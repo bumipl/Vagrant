@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podróże Kosmiczne</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #fff;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1em;
+            margin: 0 1em;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 2em;
+            background-color: #222;
+            color: #fff;
+            margin: 1em 0;
+            border-radius: 8px;
+        }
+
+        section h2 {
+            border-bottom: 2px solid #444;
+            padding-bottom: 0.5em;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Podróże Kosmiczne</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Strona Główna</a>
+        <a href="#mission">O Misji</a>
+        <a href="#gallery">Galeria</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+
+    <div class="content">
+        <section id="home">
+            <h2>Witaj na Stronie o Podróżach Kosmicznych!</h2>
+            <p>
+                Czy marzysz o odkrywaniu nieznanych zakątków kosmosu? Na tej stronie znajdziesz fascynujące informacje
+                o misjach kosmicznych, zdumiewające zdjęcia galaktyk i wiele więcej!
+            </p>
+            <p>
+                Dołącz do naszej pasji podróży kosmicznych i odkrywaj tajemnice wszechświata.
+            </p>
+        </section>
+
+        <section id="mission">
+            <h2>O Naszej Misji</h2>
+            <p>
+                Nasza misja to odkrywanie nowych obszarów kosmosu i zdobywanie unikalnych danych naukowych.
+                Dzięki najnowszym technologiom, nasze misje kosmiczne przyczyniają się do poszerzania wiedzy o
+                wszechświecie i zjawiskach kosmicznych.
+            </p>
+            <p>
+                Realizujemy wyjątkowe projekty, które pomagają nam zrozumieć strukturę kosmosu oraz
+                przyczyniają się do rozwoju technologii kosmicznych.
+            </p>
+        </section>
+
+        <section id="gallery">
+            <h2>Galeria</h2>
+            <p>
+                Oto kilka niesamowitych zdjęć z naszych najnowszych misji kosmicznych.
+                (Zdjęcia są na razie niedostępne.)
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <p>
+                Masz pytania lub chciałbyś się dowiedzieć więcej? Skontaktuj się z nami:
+            </p>
+            <p>
+                Email: kontakt@podrozekosmiczne.pl <br>
+                Telefon: +48 123 456 789
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2024 Podróże Kosmiczne
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            document.getElementById('home').style.display = 'block';
+
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    sections.forEach(section => {
+                        section.style.display = 'none';
+                    });
+
+                    const targetId = this.getAttribute('href').substring(1);
+                    document.getElementById(targetId).style.display = 'block';
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+

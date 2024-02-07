@@ -1,0 +1,22 @@
+Vagrant.configure("2") do |config|
+  # Konfiguracja pierwszej maszyny
+  config.vm.define "docker-httpd" do |docker|
+    docker.vm.box = "generic/debian12"
+    #config.ssh.username = "bumipl"
+    #config.ssh.password = "wkPqT!VqZ777"
+    docker.vm.network "public_network", bridge: "enp33s0", ip: "192.168.100.123"
+    docker.vm.hostname = "docker-httpd"
+    docker.vm.provider "virtualbox" do |vb|
+      vb.memory = 2048
+      vb.cpus = 2
+    end
+
+    #docker.ssh.insert_key = false
+
+    docker.vm.provision "ansible" do |ansible|
+      compatibility_mode = "auto"
+      ansible.verbose = "v"
+      ansible.playbook = "docker-httpd.yml"
+    end
+  end
+end
