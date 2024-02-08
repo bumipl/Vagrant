@@ -1,1 +1,1 @@
-`Oto Vagrant file, ktory na srodowisku VirtualBox zbuduje dwie maszyny sluzace jako node'y dla ansible controllera.`
+# Here is a Vagrant file that will build two machines in the VirtualBox environment that will serve as nodes for the Ansible controller.
