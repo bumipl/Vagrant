@@ -5,15 +5,6 @@
 
 - A working Vagrant setup using Vagrant + VirtualBox
 
-## Documentation
-
-Current k8s version for CKA, CKAD, and CKS exam: 1.29. 
-
-The setup is updated with 1.29 cluster version.
-
-Refer to this link for documentation full: https://devopscube.com/kubernetes-cluster-vagrant/
-
-
 ## Prerequisites
 
 1. Working Vagrant setup
